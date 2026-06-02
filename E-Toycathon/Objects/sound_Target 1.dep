@@ -1,0 +1,20 @@
+Dependencies for Project 'sound', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x559CFDE8)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 528"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+F (.\sound.cpp)(0x67BD5114)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I C:\Users\MONISH\Downloads-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\sound.o --omf_browse .\objects\sound.crf --depend .\objects\sound.d)
+I (C:\Keil_v5\ARM\INC\Philips\LPC213x.h)(0x559CFE30)
+I (C:\Users\MONISH\Downloads\ff.h)(0x67BD43B2)
+I (C:\Users\MONISH\Downloads\ffconf.h)(0x67BD43B2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)
+F (..\Downloads\ff15a\source\ff.c)(0x67BD43B2)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I C:\Users\MONISH\Downloads-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\ff.o --omf_browse .\objects\ff.crf --depend .\objects\ff.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB9D0A)
+I (..\Downloads\ff15a\source\ff.h)(0x67BD43B2)
+I (..\Downloads\ff15a\source\ffconf.h)(0x67BD43B2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)
+I (..\Downloads\ff15a\source\diskio.h)(0x67BD4FC5)
+I (C:\Users\MONISH\Downloads\integer.h)(0x67BD5111)
+F (..\Downloads\ff15a\source\diskio.c)(0x67BD43B2)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I C:\Users\MONISH\Downloads-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\diskio.o --omf_browse .\objects\diskio.crf --depend .\objects\diskio.d)
+I (..\Downloads\ff15a\source\ff.h)(0x67BD43B2)
+I (..\Downloads\ff15a\source\ffconf.h)(0x67BD43B2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)
+I (..\Downloads\ff15a\source\diskio.h)(0x67BD4FC5)
+I (C:\Users\MONISH\Downloads\integer.h)(0x67BD5111)

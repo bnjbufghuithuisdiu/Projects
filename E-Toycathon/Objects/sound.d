@@ -1,0 +1,12 @@
+.\objects\sound.o: ..\Downloads\ffsample\lpc23xx\sound.c
+.\objects\sound.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\sound.o: ..\Downloads\ffsample\lpc23xx\sound.h
+.\objects\sound.o: ..\Downloads\ffsample\lpc23xx\LPC2300.h
+.\objects\sound.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sound.o: ..\Downloads\ffsample\lpc23xx\ff.h
+.\objects\sound.o: ..\Downloads\ffsample\lpc23xx\ffconf.h
+.\objects\sound.o: ..\Downloads\ffsample\lpc23xx\interrupt.h
+.\objects\sound.o: ..\Downloads\ffsample\lpc23xx\xprintf.h
+.\objects\sound.o: ..\Downloads\ffsample\lpc23xx\disp.h
+.\objects\sound.o: ..\Downloads\ffsample\lpc23xx\uart23xx.h
+.\objects\sound.o: C:\Keil_v5\ARM\INC\Philips\lpc213x.h

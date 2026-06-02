@@ -1,0 +1,13 @@
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\main.c
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\interrupt.h
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\rtc23xx.h
+.\objects\main.o: C:\Keil_v5\ARM\INC\Philips\lpc213x.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\uart23xx.h
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\disp.h
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\ff.h
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\ffconf.h
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\filer.h
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\xprintf.h
+.\objects\main.o: ..\Downloads\ffsample\lpc23xx\diskio.h

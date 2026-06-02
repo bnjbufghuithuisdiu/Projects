@@ -1,0 +1,6 @@
+--cpp -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I C:\Users\MONISH\Downloads
+-IC:\Keil_v5\ARM\RV31\INC
+-IC:\Keil_v5\ARM\CMSIS\Include
+-IC:\Keil_v5\ARM\INC\Philips
+-D__UVISION_VERSION="528"
+-o .\lpc_timing.o --omf_browse .\lpc_timing.crf --depend .\lpc_timing.d "lpc_timing.cpp"

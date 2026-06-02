@@ -1,0 +1,29 @@
+Dependencies for Project 'sample2', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x559CFDE8)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 528"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+F (.\sample2.c)(0x67C02D89)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I "C:\Users\MONISH\Downloads\.h sound"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\sample2.o --omf_browse .\objects\sample2.crf --depend .\objects\sample2.d)
+I (C:\Keil_v5\ARM\INC\Philips\LPC213x.h)(0x559CFE30)
+I (C:\Users\MONISH\Downloads\.h sound\ff.h)(0x67C02AC1)
+I (C:\Users\MONISH\Downloads\.h sound\ffconf.h)(0x67BE731E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)
+I (C:\Users\MONISH\Downloads\.h sound\spi.h)(0x67BFC997)
+I (C:\Users\MONISH\Downloads\.h sound\wav.h)(0x67BFCF1F)
+F (..\Downloads\.c files sound\spi.c)(0x67BFC942)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I "C:\Users\MONISH\Downloads\.h sound"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\spi.o --omf_browse .\objects\spi.crf --depend .\objects\spi.d)
+I (C:\Keil_v5\ARM\INC\Philips\LPC213x.h)(0x559CFE30)
+I (C:\Users\MONISH\Downloads\.h sound\spi.h)(0x67BFC997)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)
+F (..\Downloads\.c files sound\diskio.c)(0x67BFE5A8)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I "C:\Users\MONISH\Downloads\.h sound"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\diskio.o --omf_browse .\objects\diskio.crf --depend .\objects\diskio.d)
+I (C:\Users\MONISH\Downloads\.h sound\diskio.h)(0x67BFE6DE)
+I (C:\Users\MONISH\Downloads\.h sound\integer.h)(0x67C0295C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)
+I (C:\Users\MONISH\Downloads\.h sound\spi.h)(0x67BFC997)
+F (..\Downloads\.c files sound\ff.c)(0x67C02D8A)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I "C:\Users\MONISH\Downloads\.h sound"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\ff.o --omf_browse .\objects\ff.crf --depend .\objects\ff.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB9D0A)
+I (C:\Users\MONISH\Downloads\.h sound\ff.h)(0x67C02AC1)
+I (C:\Users\MONISH\Downloads\.h sound\ffconf.h)(0x67BE731E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)
+I (C:\Users\MONISH\Downloads\.h sound\diskio.h)(0x67BFE6DE)
+I (C:\Users\MONISH\Downloads\.h sound\integer.h)(0x67C0295C)
+F (..\Downloads\.c files sound\ffunicode.c)(0x67BE731B)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I "C:\Users\MONISH\Downloads\.h sound"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\ffunicode.o --omf_browse .\objects\ffunicode.crf --depend .\objects\ffunicode.d)
+I (C:\Users\MONISH\Downloads\.h sound\ff.h)(0x67C02AC1)
+I (C:\Users\MONISH\Downloads\.h sound\ffconf.h)(0x67BE731E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)

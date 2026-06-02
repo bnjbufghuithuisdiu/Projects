@@ -1,0 +1,2770 @@
+# encoding: utf-8
+# 2025 R2
+SetScriptVersion(Version="25.2.170")
+system1 = GetSystem(Name="FFF")
+setup1 = system1.GetContainer(ComponentName="Setup")
+fluentLauncherSettings1 = setup1.GetFluentLauncherSettings()
+fluentLauncherSettings1.SetEntityProperties(Properties=Set(EnvPath={}, NumberOfProcessorsMeshing=2, NumberOfProcessors=2))
+setup1.Edit()
+setup1.SendCommand(Command='(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)')
+setup1.SendCommand(Command="""/file/set-tui-version \"25.2\"
+Graphics driver currently in use: dx11
+(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Setup|Models\"))(cx-use-window-id 51)(cx-set-camera-relative '(2.13297 -5.53848 5.18913) '(0 0 0) '(0.257886 0.253788 0.3656) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-10.3973 -3.43257 5.59648) '(0 0 0) '(1.23339 -1.07834 0.194316) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(1.23467 1.35863 6.92707) '(0 0 0) '(0.00838697 0.0956077 -0.0447866) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(0.240861 -0.578389 4.50401) '(0 0 0) '(5.66244e-05 -0.000240078 -0.00485707) 0 0)(cx-use-window-id 51)(cx-use-window-id 51)(cx-gui-do cx-set-toggle-button2 \"General*Table1*Table3*CheckButton1(Gravity)\" #f)(cx-gui-do cx-activate-item \"General*Table1*Table3*CheckButton1(Gravity)\")(cx-gui-do cx-set-toggle-button2 \"General*Table1*Table2(Solver)*ToggleBox5(Time)*Transient\" #t)(cx-gui-do cx-activate-item \"General*Table1*Table2(Solver)*ToggleBox5(Time)*Transient\")""")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*Table3(Solver)*PushButton2(Operating Conditions)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Operating Conditions*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))(cx-gui-do cx-set-toggle-button2 "Solution Initialization*Table1*ToggleBox3(Initialization Methods)*Hybrid  Initialization" #t)(cx-gui-do cx-activate-item "Solution Initialization*Table1*ToggleBox3(Initialization Methods)*Hybrid  Initialization")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame12*PushButton2(Initialize)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-set-integer-entry "Run Calculation*Table1*Table7(Time Advancement)*Table3(Parameters)*Table1*Table1*IntegerEntry1(Number of Time Steps)" 10)(cx-gui-do cx-activate-item "Run Calculation*Table1*Table7(Time Advancement)*Table3(Parameters)*Table1*Table1*IntegerEntry1(Number of Time Steps)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Run Calculation*Table1*Table9(Solution Advancement)*Table1*PushButton3(Calculate)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Information*OK")(cx-use-window-id 51)(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Scene"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Scene"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Scene"))(cx-gui-do cx-activate-item "Scene*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Animations|Playback"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Animations|Playback"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Animations|Playback"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Playback*PanelButtons*PushButton2(Close)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Results|Graphics|Pathlines\"))(cx-gui-do cx-set-list-selections \"Pathlines*Frame4*List3(Release from Surfaces)\" '( 0 1 2 3 4 5 6 7))(cx-gui-do cx-activate-item \"Pathlines*Frame4*List3(Release from Surfaces)\")(cx-gui-do cx-set-list-selections \"Pathlines*Frame4*Table1*DropDownList1(Color by)\" '( 1))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*Frame4*Table1*DropDownList1(Color by)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Information*Cancel")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(2.08659 -0.464684 -2.08734) '(0 0 0) '(-0.980945 0.105586 -1.00662) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-2.26755 -0.0684176 2.45039) '(0 0 0) '(0.953869 -0.279291 0.871169) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-0.679878 8.92768 -5.25966) '(0 0 0) '(0.0227784 0.105675 0.157652) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(3.49019 -3.32248 -1.74231) '(0 0 0) '(-0.978461 -0.680752 -0.669278) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-10.9607 8.38408 4.69943) '(0 0 0) '(0.969319 0.828081 0.791789) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-1.89824 -0.134681 -0.510911) '(0 0 0) '(-0.073484 0.346152 -0.219357) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(2.45618 0.0926549 -2.33308) '(0 0 0) '(-0.10823 -0.996494 0.0339638) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(2.49126 -3.7878 0.953182) '(0 0 0) '(-0.638988 -0.388873 0.121603) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-0.81187 -3.68896 1.17577) '(0 0 0) '(-0.713131 0.147029 -0.0358034) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(0.732298 4.145 -0.834422) '(0 0 0) '(0.792599 -0.13182 0.017587) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-5.14473 5.78318 0.0382788) '(0 0 0) '(0.735575 0.783993 -0.00210083) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(4.44467 -3.90539 1.29542) '(0 0 0) '(-0.623766 -0.749167 -0.135334) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-3.77869 3.70605 -0.609338) '(0 0 0) '(0.593225 0.629505 0.141435) 0 0)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|General"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|General"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|General"))(cx-gui-do cx-set-toggle-button2 "General*Table1*Table3*CheckButton1(Gravity)" #t)(cx-gui-do cx-activate-item "General*Table1*Table3*CheckButton1(Gravity)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-expression-entry \"General*Table1*Table3*Frame3*Frame1(Gravitational Acceleration)*ExpressionEntry1(X)\" '(\"-9.81\" . 0))(cx-gui-do cx-activate-item \"General*Table1*Table3*Frame3*Frame1(Gravitational Acceleration)*ExpressionEntry1(X)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-set-integer-entry "Run Calculation*Table1*Table7(Time Advancement)*Table3(Parameters)*Table1*Table1*IntegerEntry1(Number of Time Steps)" 60)(cx-gui-do cx-activate-item "Run Calculation*Table1*Table7(Time Advancement)*Table3(Parameters)*Table1*Table1*IntegerEntry1(Number of Time Steps)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-expression-entry \"Run Calculation*Table1*Table7(Time Advancement)*Table3(Parameters)*Table1*Table3*ExpressionEntry1(Time Step Size)\" '(\"0.5\" . 0))(cx-gui-do cx-activate-item \"Run Calculation*Table1*Table7(Time Advancement)*Table3(Parameters)*Table1*Table3*ExpressionEntry1(Time Step Size)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Run Calculation*Table1*Table9(Solution Advancement)*Table1*PushButton3(Calculate)")(cx-gui-do cx-set-toggle-button2 "Settings have changed!*Table1*ToggleBox2*Use settings changes for current and future calculations" #t)(cx-gui-do cx-activate-item "Settings have changed!*Table1*ToggleBox2*Use settings changes for current and future calculations")(cx-gui-do cx-activate-item "Settings have changed!*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command="(cx-gui-do cx-activate-item \"Information*OK\")(cx-use-window-id 51)(cx-set-camera-relative '(4.39526 -1.88863 -2.11056) '(0 0 0) '(-0.100926 -0.224598 -0.111799) 0 0)(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Results|Graphics|Pathlines|pathlines-1\"))")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Results|Graphics|Pathlines|pathlines-1\"))(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Results|Graphics|Pathlines|pathlines-1\"))(cx-gui-do cx-set-list-selections \"Pathlines*Frame4*Table1*DropDownList1(Color by)\" '( 3))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*Frame4*Table1*DropDownList1(Color by)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(-11.8482 2.53291 2.85218) '(0 0 0) '(0.145511 0.630456 0.0307947) 0 0)(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Setup|General\"))")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|General"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Setup|General\"))(cx-use-window-id 51)(cx-set-camera-relative '(9.15998 -3.1241 1.89454) '(0 0 0) '(-0.195688 -0.656793 -0.231466) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-7.09839 1.5396 1.62477) '(0 0 0) '(0.19774 0.612299 0.291655) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(1.33152 -2.22324 -0.787962) '(0 0 0) '(-1.50424 -0.678881 -0.654601) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(0.383991 1.04049 0.32881) '(0 0 0) '(0.492633 -0.178901 -0.00293505) 0 0)(cx-use-window-id 51)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-set-camera-relative '(3.21897 6.55471 5.25654) '(0 0 0) '(0.802921 0.275501 0.277091) 0 0)(cx-gui-do cx-activate-item \"Pathlines*PanelButtons*PushButton2(Cancel)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|thrust"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|thrust"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|thrust"))(cx-gui-do cx-activate-item "Force Report Definition*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|thrust"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-thrust*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*Force ReportSubMenu*Lift...")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Lift Report Definition*Table1*Table2*List2(Zones)\" '( 0))(cx-gui-do cx-activate-item \"Lift Report Definition*Table1*Table2*List2(Zones)\")(cx-gui-do cx-set-real-entry-list \"Lift Report Definition*Table1*Table1*Table2*Table2(Force Vector)*RealEntry1(X)\" '( 1))(cx-gui-do cx-set-real-entry-list \"Lift Report Definition*Table1*Table1*Table2*Table2(Force Vector)*RealEntry2(Y)\" '( 0))(cx-gui-do cx-activate-item \"Lift Report Definition*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|report-def-0"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|report-def-0"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-report-def-0*Edit...")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-text-entry "Lift Report Definition*Table1*TextEntry3(Name)" "lift_coefficitent")(cx-gui-do cx-activate-item "Lift Report Definition*Table1*TextEntry3(Name)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Lift Report Definition*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-Report Definitions*Edit...")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Report Definitions*PanelButtons*PushButton1(Close)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*Force ReportSubMenu*Drag...")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Drag Report Definition*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*Force ReportSubMenu*Moment...")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-toggle-button2 "Moment Report Definition*Table1*Table2*ToggleBox1(Report Output Type)*Drag Force" #t)(cx-gui-do cx-activate-item "Moment Report Definition*Table1*Table2*ToggleBox1(Report Output Type)*Drag Force")(cx-gui-do cx-set-text-entry "Moment Report Definition*Table1*TextEntry3(Name)" "moment")(cx-gui-do cx-activate-item "Moment Report Definition*Table1*TextEntry3(Name)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Moment Report Definition*Table1*Table2*List2(Zones)\" '( 0))(cx-gui-do cx-activate-item \"Moment Report Definition*Table1*Table2*List2(Zones)\")(cx-gui-do cx-activate-item \"Moment Report Definition*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*Force ReportSubMenu*Moment...")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Moment Report Definition*Table1*Table2*List2(Zones)\" '( 0))(cx-gui-do cx-activate-item \"Moment Report Definition*Table1*Table2*List2(Zones)\")(cx-gui-do cx-set-text-entry \"Moment Report Definition*Table1*TextEntry3(Name)\" \"moment_coefficient\")(cx-gui-do cx-activate-item \"Moment Report Definition*Table1*TextEntry3(Name)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Moment Report Definition*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame12*PushButton2(Initialize)")(cx-gui-do cx-activate-item "Question*OK")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Run Calculation*Table1*Table9(Solution Advancement)*Table1*PushButton3(Calculate)")')
+setup1.SendCommand(Command="(cx-gui-do cx-activate-item \"Information*OK\")(cx-use-window-id 51)(cx-set-camera-relative '(-2.26007 1.45088 0.337875) '(0 0 0) '(0.130333 0.169543 0.146845) 0 0)(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Results|Graphics|Pathlines|pathlines-1\"))")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(-6.03097 -4.12533 0.381874) '(0 0 0) '(-0.485515 1.05583 0.743061) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(23.4986 7.25437 3.03878) '(0 0 0) '(0.231094 -0.226038 -1.14245) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-5.7953 2.20975 3.79812) '(0 0 0) '(0.0829825 0.0777162 0.208541) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-2.57414 6.08193 -11.0899) '(0 0 0) '(-0.401446 -0.67742 -0.561996) 0 0)(cx-use-window-id 51)(cx-use-window-id 51)(cx-set-camera-relative '(-8.84326 -8.54786 0.892852) '(0 0 0) '(0.994747 -1.03847 -0.0948782) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(4.51811 1.09922 -0.462774) '(0 0 0) '(-0.132623 0.524788 -0.0473871) 0 0)(cx-use-window-id 51)(cx-use-window-id 51)(cx-set-camera-relative '(-2.36013 -4.77804 -1.81847) '(0 0 0) '(0.793634 -0.257003 -0.301217) 0 0)(cx-set-camera-relative '(0.97887 0.0216937 -3.87726) '(0 0 0) '(-0.263158 0.236595 -0.202179) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(1.79983 2.5635 1.991) '(0 0 0) '(-0.568097 0.264658 0.190307) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(6.71148e-05 -0.00146899 -0.0119384) '(0 0 0) '(-0.00040205 0.000841022 0.00539781) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-0.85606 -1.59329 0.130685) '(0 0 0) '(0.783053 -0.417023 0.0405164) 0 0)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-integer-entry "Run Calculation*Table1*Table7(Time Advancement)*Table3(Parameters)*Table5*Table1*Table1*IntegerEntry1(Max Iterations/Time Step)" 21)(cx-gui-do cx-activate-item "Run Calculation*Table1*Table7(Time Advancement)*Table3(Parameters)*Table5*Table1*Table1*IntegerEntry1(Max Iterations/Time Step)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|General"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|General"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|General"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-toggle-button2 "General*Table1*Table2(Solver)*ToggleBox5(Time)*Steady" #t)(cx-gui-do cx-activate-item "General*Table1*Table2(Solver)*ToggleBox5(Time)*Steady")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame12*PushButton2(Initialize)")(cx-gui-do cx-activate-item "Question*OK")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Run Calculation*Table1*Table6(Solution Advancement)*Table1*PushButton3(Calculate)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Information*OK")(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(-11.4738 -4.70662 -3.37493) '(0 0 0) '(0.170419 -0.411613 0.0285289) 0 0)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(2.63514 1.63879 -0.682508) '(0 0 0) '(-0.358528 0.620232 0.101199) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-2.42791 -1.23195 -0.44248) '(0 0 0) '(0.356483 -0.619994 -0.123004) 0 0)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-gui-do cx-activate-item \"Information*Cancel\")(cx-use-window-id 51)(cx-set-camera-relative '(-3.54539 5.79343 -5.57806) '(0 0 0) '(-0.0856001 -0.595962 0.0200338) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(4.11737 0.792133 1.27874) '(0 0 0) '(-0.306556 0.455095 0.888852) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-2.52666 -1.0852 -1.23535) '(0 0 0) '(0.397728 0.0459557 -0.663496) 0 0)(cx-use-window-id 51)(cx-use-window-id 51)(cx-use-window-id 51)(cx-set-camera-relative '(2.66089 4.33893 0.663385) '(0 0 0) '(-0.181158 0.0174929 0.441838) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(21.7247 -38.0091 -4.58007) '(0 0 0) '(-0.160216 0.274197 0.0890313) 0 0)(cx-use-window-id 51)(cx-use-window-id 51)(cx-use-window-id 51)(cx-set-camera-relative '(3.8115 5.7353 5.39031) '(0 0 0) '(-0.563153 0.314822 0.061509) 0 0)(cx-use-window-id 51)(cx-use-window-id 51)(cx-set-camera-relative '(-2.72015 -0.779865 0.295505) '(0 0 0) '(0.0186403 -0.0553961 -0.0017094) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(4.35454 -0.099144 -2.67877) '(0 0 0) '(0.752188 0.113859 -0.363931) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(5.14636 -7.66423 6.0769) '(0 0 0) '(-1.07045 -0.658093 0.10772) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-2.84372 1.36299 -5.87089) '(0 0 0) '(0.96941 -0.140615 -0.683449) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(1.81564 -2.01486 4.23858) '(0 0 0) '(-0.723852 1.3003 0.768073) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-3.09396 4.59003 -0.330226) '(0 0 0) '(-0.931809 -0.626503 -0.980507) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-1.59865 -2.72846 -1.51529) '(0 0 0) '(1.4322 -0.785697 -0.119428) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(0.394827 7.1988 3.52988) '(0 0 0) '(-0.970856 0.165818 -0.230596) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(7.81938 2.16175 -3.29905) '(0 0 0) '(-0.266592 0.570553 -0.0967945) 0 0)(cx-use-window-id 51)(cx-use-window-id 51)(cx-set-camera-relative '(3.62477 -1.59619 1.43578) '(0 0 0) '(0.607448 1.0238 -0.400833) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-1.2927 -5.95989 2.8457) '(0 0 0) '(1.03701 -0.148158 0.179372) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(0.14663 0.523223 -0.538497) '(0 0 0) '(-1.00719 0.265723 -0.001995) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-0.299047 -0.873397 0.446998) '(0 0 0) '(1.04809 -0.406525 -0.100612) 0 0)(cx-set-camera-relative '(0.15775 -8.3567 3.08307) '(0 0 0) '(0.881935 0.786498 -0.135533) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-0.00952089 -0.128523 -0.17359) '(0 0 0) '(-0.0235283 0.0299811 0.0258532) 0 0)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Particle Tracks"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Particle Tracks"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Results|Graphics|Particle Tracks\"))(cx-gui-do cx-set-list-selections \"Particle Tracks*Frame3*Table6(Display State)*DropDownList1\" '( 0))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Particle Tracks*Frame3*Table6(Display State)*DropDownList1")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Display States*PanelButtons*PushButton2(Close)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Particle Tracks*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*FileMenu*Close Fluent")')
+results1 = system1.GetContainer(ComponentName="Results")
+results1.Edit()
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.608742
+    Pan = 0, 0
+    Rotation Quaternion = 0.360104, -0.416399, 0.0732105, 0.83161
+    
+  END
+
+END
+
+VIEW:View 4
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.883854
+    Pan = 0, 0
+    Rotation Quaternion = 0.279848, -0.364705, -0.115917, 0.880476
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+VIEW:View 2
+  Light Angle = 50, 110
+END
+
+VIEW:View 3
+  Light Angle = 50, 110
+END
+
+VIEW:View 4
+  Light Angle = 50, 110
+END
+
+> update
+> autolegend plot=/CONTOUR:pressure, view=VIEW:View 1""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.608742
+    Pan = 0, 0
+    Rotation Quaternion = 0.221588, -0.258908, -0.0335074, 0.939542
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""CONTOUR:pressure
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Pressure
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = boundary
+Max = 0.0 [Pa]
+Min = 0.0 [Pa]
+Number of Contours = 15
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [Pa],1 [Pa]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:pressure, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.608742
+    Pan = 0, 0
+    Rotation Quaternion = 0.247, -0.658144, 0.0234597, 0.710828
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""CONTOUR:pressure
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Pressure
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = rotating_disc
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = contact_region src
+Max = 0.0 [Pa]
+Min = 0.0 [Pa]
+Number of Contours = 15
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [Pa],1 [Pa]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.705954
+    Pan = 0, 0
+    Rotation Quaternion = 0.247, -0.658144, 0.0234597, 0.710828
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command="""CONTOUR:pressure
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Pressure
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = contact_region src
+Max = 0.0 [Pa]
+Min = 0.0 [Pa]
+Number of Contours = 15
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [Pa],1 [Pa]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command="""CONTOUR:pressure
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Pressure
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = propeller
+Max = 0.0 [Pa]
+Min = 0.0 [Pa]
+Number of Contours = 15
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [Pa],1 [Pa]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 11.8185
+    Pan = 0, 0
+    Rotation Quaternion = 0, -0.707107, 0, 0.707107
+    
+  END
+
+END
+
+> update
+CONTOUR:pressure
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Pressure
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = propeller
+Max = 0.0 [Pa]
+Min = 0.0 [Pa]
+Number of Contours = 2000
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [Pa],1 [Pa]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.751788
+    Pan = 0, 0
+    Rotation Quaternion = 0.213223, -0.0924788, -0.306419, 0.923087
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain""")
+results1.SendCommand(Command="> autolegend plot=/CONTOUR:pressure, view=VIEW:View 1")
+results1.SendCommand(Command="> autolegend plot=/CONTOUR:pressure, view=VIEW:View 1")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 3.29592
+    Pan = 0, 0
+    Rotation Quaternion = 0.230836, -0.642691, -0.408961, -0.605319
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 8.19436
+    Pan = 0, 0
+    Rotation Quaternion = -0.0224356, -0.710696, 0.000469644, -0.703139
+    
+  END
+
+END
+
+> update
+> autolegend plot=/VECTOR:Vector 1, view=VIEW:View 1""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.875956
+    Pan = 0, 0
+    Rotation Quaternion = -0.00691093, -0.990844, -0.104035, -0.0857514
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /WIREFRAME:Wireframe, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /WIREFRAME:Wireframe, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /DEFAULT LEGEND:Default Legend View 1, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /DEFAULT LEGEND:Default Legend View 1, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /DEFAULT LEGEND:Default Legend View 1, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /DEFAULT LEGEND:Default Legend View 1, view=/VIEW:View 1""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command="> autolegend plot=/STREAMLINE:Streamline 1, view=VIEW:View 1")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 25
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /STREAMLINE:Streamline 1, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.755334
+    Pan = 0, 0
+    Rotation Quaternion = -0.0150631, -0.969339, -0.244511, -0.0188208
+    
+  END
+
+END
+
+> update
+STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity in Stn Frame
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 50
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity in Stn Frame
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity in Stn Frame
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 50
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity in Stn Frame
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity in Stn Frame
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 500
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity in Stn Frame
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 1.04124
+    Pan = 0, 0
+    Rotation Quaternion = -0.581979, 0.392156, -0.660787, -0.266165
+    
+  END
+
+END
+
+> update
+STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 500
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.943312
+    Pan = 0, 0
+    Rotation Quaternion = -0.0995462, 0.0535242, -0.788694, -0.604278
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 5000
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.943312
+    Pan = 0, 0
+    Rotation Quaternion = 0.552982, 0.435338, -0.46953, -0.533097
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 5000
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""INTERNAL POINT CLOUD:Streamline Seed Preview
+  Option = From Locations
+  Domain List = /DOMAIN GROUP:All Domains
+  Location List = pressure_outlet
+  Locator Sampling Method = Equally Spaced
+  Number of Samples = 5000
+  Sample Spacing = 0.1
+  Sampling Aspect Ratio = 1
+  Reduction or Max Number = Max Number
+  Reduction Factor = 1.0
+  Maximum Number of Items = 25
+  Sampling Grid Angle = 0 [degree]
+  Colour Mode = Constant
+  Colour = 0, 1, 0
+  Point Symbol = Point2D
+  Symbol Size = 4
+  Symbol Size Mode = Absolute
+  Visibility = On
+  Draw Faces = On
+END
+>show /INTERNAL POINT CLOUD:Streamline Seed Preview""")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 5000
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 5000
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 5000
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 250
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 1.46949
+    Pan = 0, 0
+    Rotation Quaternion = 0.516898, 0.486061, 0.655724, 0.257951
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 1.46949
+    Pan = 0, 0
+    Rotation Quaternion = 0.498773, 0.654287, -0.157814, -0.546055
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = boundary
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 250
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.854086
+    Pan = 0, 0
+    Rotation Quaternion = 0.65541, 0.0357999, 0.754101, -0.0207994
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_inlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 250
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.854086
+    Pan = 0, 0
+    Rotation Quaternion = 0.106356, 0.490097, 0.817013, 0.284473
+    
+  END
+
+END
+
+> update
+STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_inlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 250
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_inlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 25000
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 250
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 1.47037
+    Pan = 0, 0
+    Rotation Quaternion = 0.232164, 0.0604465, 0.959177, 0.14955
+    
+  END
+
+END
+
+> update
+> autolegend plot=/CONTOUR:velocity, view=VIEW:View 1""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command="""CONTOUR:velocity
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = boundary
+Max = 0.0 [m s^-1]
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [m s^-1],1 [m s^-1]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:velocity, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.685113
+    Pan = 0, 0
+    Rotation Quaternion = -0.107052, 0.0756358, 0.976728, -0.169585
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc""")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region src, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:contact_region trg, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure_inlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:boundary, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:rotating_disc")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command=">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain")
+results1.SendCommand(Command="""CONTOUR:velocity
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = propeller
+Max = 0.0 [m s^-1]
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [m s^-1],1 [m s^-1]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.636196
+    Pan = 0, 0
+    Rotation Quaternion = -0.107052, 0.0756358, 0.976728, -0.169585
+    
+  END
+
+END
+
+> update
+>highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:propeller, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:domain""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:pressure, view=/VIEW:View 1""")
+results1.SendCommand(Command="> autolegend plot=/STREAMLINE:Streamline 1, view=VIEW:View 1")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 250
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.636196
+    Pan = 0, 0
+    Rotation Quaternion = -0.111532, -0.502046, 0.705332, 0.487806
+    
+  END
+
+END
+
+> update
+> autolegend plot=/PARTICLE TRACK:particle, view=VIEW:View 1""")
+results1.SendCommand(Command="""PARTICLE TRACK:particle
+Activate Filter = Off
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Constant
+Colour Scale = Linear
+Colour Variable = Pressure
+Colour Variable Boundary Values = Conservative
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Symbols = Off
+Draw Tracks = On
+Font = Sans Serif
+Input File =  
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Limit Track Option = Up To Current Timestep
+Line Width = 1
+Max = 0.0
+Maximum Number of Tracks = 25
+Min = 0.0
+Number of Contours = 11
+Number of Sides = 8
+Option = From File
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Tracks = Max Tracks
+Show Track Labels = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Symbol Max Time Selection = User Specified
+Symbol Scale Type = Relative
+Symbol Size = 1.0
+Symbol Size Option = Constant
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Track Drawing Mode = Line
+Track End Distance = 0.0 [m]
+Track End Time = 0.0 [s]
+Track File Type = CFX4
+Track Limit Type = Time
+Track Line Width = 2
+Track Size = 1.0
+Track Start Distance = 0.0 [m]
+Track Start Time = 0.0 [s]
+Track Symbol = Ball
+Transparency = 0.0
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /PARTICLE TRACK:particle, view=/VIEW:View 1""")
+results1.SendCommand(Command="> autolegend plot=/STREAMLINE:Streamline 1, view=VIEW:View 1")
+results1.SendCommand(Command="""VIEW:View 1
+Camera Mode = User Specified
+CAMERA:
+Option = Pivot Point and Quaternion
+Pivot Point = -0.75, 0, 0
+Scale = 0.636196
+Pan = 0, 0
+Rotation Quaternion = -0.406816, -0.632945, 0.349927, 0.558003
+
+END
+
+END
+
+> update
+ANIMATION:ANIMATION
+QAnim MPEG Filename = C:/Users/MONISH/OneDrive/Documents/FFF.wmv
+QAnim Save MPEG = Off
+QAnim Looping = Bounce
+QAnim Looping Cycles = 1
+Video Format = wmv
+
+END""")
+results1.SendCommand(Command="""ANIMATION: ANIMATION
+QAnim Object List = /STREAMLINE:Streamline 1
+QAnim Frames = 46
+QAnim MPEG Filename = C:/Users/MONISH/OneDrive/Documents/FFF.wmv
+QAnim Save MPEG = Off
+QAnim Looping = Bounce
+QAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate quickAnimate""")
+results1.SendCommand(Command="""ANIMATION: ANIMATION
+QAnim Object List = /STREAMLINE:Streamline 1
+QAnim Frames = 77
+QAnim MPEG Filename = C:/Users/MONISH/OneDrive/Documents/FFF.wmv
+QAnim Save MPEG = Off
+QAnim Looping = Bounce
+QAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate quickAnimate""")
+results1.SendCommand(Command="""VIEW:View 1
+Camera Mode = User Specified
+CAMERA:
+Option = Pivot Point and Quaternion
+Pivot Point = -0.75, 0, 0
+Scale = 0.636196
+Pan = 0, 0
+Rotation Quaternion = -0.122485, -0.707589, 0.0639169, 0.692938
+
+END
+
+END
+
+> update
+ANIMATION: ANIMATION
+QAnim Object List = /STREAMLINE:Streamline 1
+QAnim Frames = 100
+QAnim MPEG Filename = C:/Users/MONISH/OneDrive/Documents/FFF.wmv
+QAnim Save MPEG = Off
+QAnim Looping = Bounce
+QAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate quickAnimate""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.75, 0, 0
+    Scale = 0.636196
+    Pan = 0, 0
+    Rotation Quaternion = -0.466518, -0.638056, 0.41044, 0.454662
+    
+  END
+
+END
+
+> update
+> autolegend plot=/STREAMLINE:Streamline 1, view=VIEW:View 1""")
+results1.SendCommand(Command="> autolegend plot=/STREAMLINE:Streamline 1, view=VIEW:View 1")
+results1.SendCommand(Command="""STREAMLINE:Streamline 1
+Absolute Tolerance = 0.0 [m]
+Apply Instancing Transform = On
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Use Plot Variable
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Cross Periodics = On
+Culling Mode = No Culling
+Domain List = /DOMAIN GROUP:All Domains
+Draw Contours = Off
+Draw Faces = On
+Draw Lines = Off
+Draw Streams = On
+Draw Symbols = Off
+Grid Tolerance = 0.01
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Width = 1
+Location List = pressure_outlet
+Locator Sampling Method = Equally Spaced
+Max = 0.0 [m s^-1]
+Maximum Number of Items = 25
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Number of Samples = 500
+Number of Sides = 8
+Range = Global
+Reduction Factor = 1.0
+Reduction or Max Number = Max Number
+Sample Spacing = 0.1
+Sampling Aspect Ratio = 1
+Sampling Grid Angle = 0 [degree]
+Seed Point Type = Equally Spaced Samples
+Simplify Geometry = Off
+Specular Lighting = On
+Stream Drawing Mode = Line
+Stream Initial Direction = 0 , 0 , 0 
+Stream Size = 1.0
+Stream Symbol = Ball
+Streamline Direction = Forward
+Streamline Maximum Periods = 20
+Streamline Maximum Segments = 10000
+Streamline Maximum Time = 0.0 [s]
+Streamline Periodic Time Interval = -1 [s]
+Streamline Type = 3D Streamline
+Streamline Width = 2
+Surface Drawing = Smooth Shading
+Surface Streamline Direction = Forward and Backward
+Symbol Size = 1.0
+Symbol Start Time = 10.0 [s]
+Symbol Stop Time = -10.0 [s]
+Symbol Time Interval = 1.0 [s]
+Tolerance Mode = Grid Relative
+Transparency = 0.0
+Variable = Velocity
+Variable Boundary Values = Conservative
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.Exit()
+fluentLauncherSettings1.SetEntityProperties(Properties=Set(EnvPath={}))
+setup1.Edit()
+setup1.SendCommand(Command='(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)')
+setup1.SendCommand(Command="""/file/set-tui-version \"25.2\"
+Graphics driver currently in use: dx11
+(cx-gui-do cx-set-toggle-button2 \"General*Table1*Table2(Solver)*ToggleBox5(Time)*Transient\" #t)(cx-gui-do cx-activate-item \"General*Table1*Table2(Solver)*ToggleBox5(Time)*Transient\")(cx-use-window-id 51)(cx-use-window-id 51)(cxg-clear-all-selections (cx-active-window))(cxg-add-surfaces-to-selection '(boundary) (cx-active-window))""")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Quick Edit*Table1*PushButton4(icon_close)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|rotating_disc (fluid, id=3)"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|rotating_disc (fluid, id=3)"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Setup|Cell Zone Conditions|Fluid|rotating_disc (fluid, id=3)\"))(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 1)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 2)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 2)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 3)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 4)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 5)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 6)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 7)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 8)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 9)(cx-gui-do cx-activate-tab-index \"Fluid*Frame2*Table3*Frame1\" 0)(cx-gui-do cx-enable-apply-button \"Fluid\")(cx-gui-do cx-set-expression-entry \"Fluid*Frame2*Table3*Frame1*Frame1(Reference Frame)*Table1*Table1*Table4*Table1*Table1(Rotational Velocity)*Table1*ExpressionEntry1(Speed)\" '(\"31.41594\" . 0))(cx-gui-do cx-activate-item \"Fluid*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))(cx-gui-do cx-activate-item "Fluid*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame12*PushButton2(Initialize)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Run Calculation*Table1*Table9(Solution Advancement)*Table1*PushButton3(Calculate)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Quick Edit*Table1*PushButton4(icon_close)")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-gui-do cx-activate-item \"Information*Cancel\")(cx-use-window-id 51)(cx-use-window-id 51)(cx-set-camera-relative '(-3.20169 2.03688 -1.68323) '(0 0 0) '(0.715455 -0.434082 -0.437572) 0 0)(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Results|Graphics|Contours|contour-1\"))")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))')
+setup1.SendCommand(Command="(cx-gui-do cx-activate-item \"Contours*PanelButtons*PushButton1(OK)\")(cxg-clear-all-selections (cx-active-window))(cxg-add-surfaces-to-selection '() (cx-active-window))")
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(0.152752 -7.60649 -5.1657) '(0 0 0) '(-0.215455 0.726976 0.937572) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-6.02866 2.80669 8.47025) '(0 0 0) '(1.17277 -0.1191 0.909127) 0 0)(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '( 1 2 3 4 5 6 7))(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")(cx-gui-do cx-activate-item \"Contours*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(-4.43188 1.77359 -1.89399) '(0 0 0) '(0.015184 0.392323 0.218242) 0 0)(cx-gui-do cx-activate-item \"Contours*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(7.70894 -1.79255 2.43392) '(0 0 0) '(0.00366199 -0.314363 -0.198985) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(2.78349 -1.43923 0.35188) '(0 0 0) '(-0.0526999 -0.128505 -0.157104) 0 0)(cx-gui-do cx-activate-item \"Contours*PanelButtons*PushButton2(Cancel)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Pathlines*Frame4*Table1*DropDownList1(Color by)\" '( 1))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*Frame4*Table1*DropDownList1(Color by)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-use-window-id 51)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|lift_coefficitent"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|lift_coefficitent"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-lift_coefficitent*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-moment_coefficient*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-moment*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))(cx-gui-do cx-activate-item "Viscous Model*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|rotating_disc (fluid, id=3)"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|propeller (wall, id=10)"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|propeller (wall, id=10)"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|propeller (wall, id=10)"))(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 1)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 2)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 3)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 4)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 5)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 6)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 7)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 8)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 9)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 10)(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 1)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 2)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 3)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 4)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 5)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 6)(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)(cx-gui-do cx-enable-apply-button "Wall")(cx-gui-do cx-set-toggle-button2 "Wall*Frame4*Frame1(Momentum)*Table1*Frame1*Frame1*Table1*ToggleBox1(Wall Motion)*Moving Wall" #t)(cx-gui-do cx-activate-item "Wall*Frame4*Frame1(Momentum)*Table1*Frame1*Frame1*Table1*ToggleBox1(Wall Motion)*Moving Wall")(cx-gui-do cx-set-toggle-button2 "Wall*Frame4*Frame1(Momentum)*Table1*Frame1*Frame1*Table1*ToggleBox1(Wall Motion)*Stationary Wall" #t)(cx-gui-do cx-activate-item "Wall*Frame4*Frame1(Momentum)*Table1*Frame1*Frame1*Table1*ToggleBox1(Wall Motion)*Stationary Wall")(cx-gui-do cx-set-toggle-button2 "Wall*Frame4*Frame1(Momentum)*Table1*Frame2*Frame1*Table1*ToggleBox1(Shear Condition)*Specified Shear" #t)(cx-gui-do cx-activate-item "Wall*Frame4*Frame1(Momentum)*Table1*Frame2*Frame1*Table1*ToggleBox1(Shear Condition)*Specified Shear")(cx-gui-do cx-set-toggle-button2 "Wall*Frame4*Frame1(Momentum)*Table1*Frame2*Frame1*Table1*ToggleBox1(Shear Condition)*No Slip" #t)(cx-gui-do cx-activate-item "Wall*Frame4*Frame1(Momentum)*Table1*Frame2*Frame1*Table1*ToggleBox1(Shear Condition)*No Slip")(cx-gui-do cx-activate-item "Wall*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(-0.399613 1.74179 -2.35261) '(0 0 0) '(0.0210717 0.00218472 0.209741) 0 0)(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Solution|Report Definitions|thrust\"))(cx-gui-do cx-set-list-tree-selections \"NavigationPane*Frame2*Table1*List_Tree2\" (list \"Solution|Report Definitions|thrust\"))(cx-gui-do cx-list-tree-right-click \"NavigationPane*Frame2*Table1*List_Tree2\" )")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-thrust*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|domain (fluid, id=4)"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|domain (fluid, id=4)"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|domain (fluid, id=4)"))(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 1)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 2)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 2)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 3)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 4)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 5)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 6)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 7)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 8)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 9)(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Fluid*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|rotating_disc (fluid, id=3)"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|rotating_disc (fluid, id=3)"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|rotating_disc (fluid, id=3)"))')
+setup1.SendCommand(Command="(cx-gui-do cx-enable-apply-button \"Fluid\")(cx-gui-do cx-set-expression-entry \"Fluid*Frame2*Table3*Frame1*Frame1(Reference Frame)*Table1*Table1*Table4*Table1*Table1(Rotational Velocity)*Table1*ExpressionEntry1(Speed)\" '(\"209.4396\" . 0))(cx-gui-do cx-activate-item \"Fluid*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Fluid*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame12*PushButton2(Initialize)")(cx-gui-do cx-activate-item "Question*OK")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame12*PushButton2(Initialize)")(cx-gui-do cx-activate-item "Question*OK")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-moment_coefficient*Edit...")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-real-entry-list \"Moment Report Definition*Table1*Table1*Table2*Table3(Moment Axis)*RealEntry1(X)\" '( 1))(cx-gui-do cx-set-real-entry-list \"Moment Report Definition*Table1*Table1*Table2*Table3(Moment Axis)*RealEntry3(Z)\" '( 0))(cx-gui-do cx-activate-item \"Moment Report Definition*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-moment*Edit...")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-real-entry-list \"Moment Report Definition*Table1*Table1*Table2*Table3(Moment Axis)*RealEntry1(X)\" '( 1))(cx-gui-do cx-set-real-entry-list \"Moment Report Definition*Table1*Table1*Table2*Table3(Moment Axis)*RealEntry3(Z)\" '( 0))(cx-gui-do cx-activate-item \"Moment Report Definition*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-activate-item "Moment Report Definition*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame12*PushButton2(Initialize)")(cx-gui-do cx-activate-item "Question*OK")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Run Calculation*Table1*Table9(Solution Advancement)*Table1*PushButton3(Calculate)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Information*OK")(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-moment*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Messages*PanelButtons*PushButton1(Close)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Messages*PanelButtons*PushButton1(Close)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-moment*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-moment*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-moment*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|moment_coefficient"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-moment_coefficient*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|lift_coefficitent"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|lift_coefficitent"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-lift_coefficitent*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|thrust"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|thrust"))(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-thrust*Compute")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-use-window-id 52)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Pathlines*Frame4*Table1*DropDownList2\" '( 2))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*Frame4*Table1*DropDownList2")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-use-window-id 52)(cx-set-camera-relative '(0.149894 -0.527527 0.055607) '(0 0 0) '(0.716508 0.264236 0.598069) 0 0)(cx-use-window-id 52)(cx-set-camera-relative '(0.242014 1.43 -0.589772) '(0 0 0) '(-0.519378 -0.0360014 -0.280851) 0 0)(cx-use-window-id 52)(cx-use-window-id 52)(cx-use-window-id 52)(cx-use-window-id 52)(cx-use-window-id 52)(cx-use-window-id 52)(cx-use-window-id 52)(cx-use-window-id 52)(cx-use-window-id 52)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command="(cx-use-window-id 52)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton7(Pulse)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*FileMenu*Close Fluent")(cx-gui-do cx-set-toggle-button2 "Settings have changed!*Table1*ToggleBox2*Use settings changes for current and future calculations" #t)(cx-gui-do cx-activate-item "Settings have changed!*Table1*ToggleBox2*Use settings changes for current and future calculations")(cx-gui-do cx-activate-item "Settings have changed!*PanelButtons*PushButton1(OK)")')
+Save(Overwrite=True)

@@ -1,0 +1,227 @@
+<FluentXMLReport>
+<version>
+Fluent
+Version: 3d, dp, pbns, sstkw (3d, double precision, pressure-based, SST k-omega)
+Release: 25.2.0
+Title: 
+</version>
+
+<Models>
+
+Models
+------
+
+   Model                        Settings                       
+   ---------------------------------------------------------
+   Space                        3D                             
+   Time                         Steady                         
+   Viscous                      SST k-omega turbulence model   
+   Heat Transfer                Disabled                       
+   Solidification and Melting   Disabled                       
+   Species                      Disabled                       
+   Coupled Dispersed Phase      Disabled                       
+   NOx Pollutants               Disabled                       
+   SOx Pollutants               Disabled                       
+   Soot                         Disabled                       
+   Mercury Pollutants           Disabled                       
+   Structure                    Disabled                       
+   Acoustics                    Disabled                       
+   Eulerian Wall Film           Disabled                       
+   Potential/Electrochemistry   Disabled                       
+   Multiphase                   Disabled                       
+
+</Models>
+
+<MaterialProperties>
+Material Properties
+-------------------
+
+   Material: air (fluid)
+
+      Property    Units      Method     Value(s)     
+      --------------------------------------------
+      Density     kg/m^3     constant   1.225        
+      Viscosity   kg/(m s)   constant   1.7894e-05   
+
+   Material: pvc-apex (solid)
+
+      Property   Units    Method     Value(s)   
+      ---------------------------------------
+      Density    kg/m^3   constant   1040       
+
+</MaterialProperties>
+
+<CellZoneConditions>
+Cell Zone Conditions
+--------------------
+
+   Zones
+
+      name            id   type    material   
+      -------------------------------------
+      rotating_disc   3    fluid   air        
+      domain          4    fluid   air        
+
+   Setup Conditions
+
+      rotating_disc
+
+         Condition                                      Value   
+         ----------------------------------------------------
+         Material Name                                  air     
+         Frame Motion?                                  yes     
+         Reference Frame Rotation Speed [rev/min]       2000    
+         Reference Frame X-Component of Rotation-Axis   1       
+         Reference Frame Z-Component of Rotation-Axis   0       
+         Mesh Motion?                                   no      
+
+      domain
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+         Mesh Motion?    no      
+
+</CellZoneConditions>
+
+<BoundaryConditions>
+Boundary Conditions
+-------------------
+
+   Zones
+
+      name                 id   type              
+      -----------------------------------------
+      pressure_outlet      8    pressure-outlet   
+      boundary             9    pressure-outlet   
+      pressure_inlet       7    pressure-outlet   
+      wall-14              14   wall              
+      wall-13              13   wall              
+      propeller            10   wall              
+      contact_region-src   11   interface         
+      contact_region-trg   12   interface         
+
+   Setup Conditions
+
+      pressure_outlet
+
+         Condition   Value   
+         -----------------
+
+      boundary
+
+         Condition   Value   
+         -----------------
+
+      pressure_inlet
+
+         Condition   Value   
+         -----------------
+
+      wall-14
+
+         Condition                  Value             
+         ------------------------------------------
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+         Wall Surface Roughness     Standard          
+
+      wall-13
+
+         Condition                  Value             
+         ------------------------------------------
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+         Wall Surface Roughness     Standard          
+
+      propeller
+
+         Condition                  Value             
+         ------------------------------------------
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+         Wall Surface Roughness     Standard          
+
+      contact_region-src
+
+         Condition   Value     
+         -------------------
+                     wall-13   
+
+      contact_region-trg
+
+         Condition   Value     
+         -------------------
+                     wall-14   
+
+</BoundaryConditions>
+
+<SolverSettings>
+Solver Settings
+---------------
+
+   Equations
+
+      Equation     Solved   
+      -------------------
+      Flow         yes      
+      Turbulence   yes      
+
+   Numerics
+
+      Numeric                         Enabled   
+      ---------------------------------------
+      Absolute Velocity Formulation   yes       
+
+   Pseudo Time Explicit Relaxation Factors
+
+      Variable                    Relaxation Factor   
+      ---------------------------------------------
+      Density                     1                   
+      Body Forces                 1                   
+      Turbulent Kinetic Energy    0.75                
+      Specific Dissipation Rate   0.75                
+      Turbulent Viscosity         1                   
+      Explicit Momentum           0.5                 
+      Explicit Pressure           0.5                 
+
+   Linear Solver
+
+      Variable                    Solver Type   Termination Criterion   Residual Reduction Tolerance   
+      ----------------------------------------------------------------------------------------------
+      Flow                        F-Cycle       0.1                                                    
+      Turbulent Kinetic Energy    F-Cycle       0.1                                                    
+      Specific Dissipation Rate   F-Cycle       0.1                                                    
+
+   Pressure-Velocity Coupling
+
+      Parameter                               Value     
+      -----------------------------------------------
+      Type                                    Coupled   
+      Pseudo Time Method (Global Time Step)   yes       
+
+   Discretization Scheme
+
+      Variable                    Scheme                
+      -----------------------------------------------
+      Pressure                    Second Order          
+      Momentum                    Second Order Upwind   
+      Turbulent Kinetic Energy    Second Order Upwind   
+      Specific Dissipation Rate   Second Order Upwind   
+
+   Solution Limits
+
+      Quantity                                 Limit    
+      -----------------------------------------------
+      Minimum Absolute Pressure [Pa]           1        
+      Maximum Absolute Pressure [Pa]           5e+10    
+      Minimum Static Temperature [K]           1        
+      Maximum Static Temperature [K]           5000     
+      Minimum Turb. Kinetic Energy [m^2/s^2]   1e-14    
+      Minimum Spec. Dissipation Rate [s^-1]    1e-20    
+      Maximum Turb. Viscosity Ratio            100000   
+
+</SolverSettings>
+
+</FluentXMLReport>

@@ -1,0 +1,115 @@
+#include<lpc213x.h>
+#include<stdio.h>
+#include<string.h>
+
+using namespace std;
+class Switch{
+	public:
+		//switch_constructor
+		Switch(){
+		
+			IO1DIR=0x0;//P1.0 to P1.31-switch input
+			IO0DIR=(1<<4);
+		}
+		int search_ind(){
+			for(int i=16;i<=31;i++){
+				if((IO1PIN &(1<<i))==0)//bitwise op to look logic level
+				{
+					
+					return i;
+				}
+			}
+			return -1;
+		}
+		
+};
+class LED{
+	public:
+		int mode;
+		int no_Of_led;
+		//LED_constructor
+		LED(int a=0){
+			init_uart_1();
+			mode=a;//setting up mode=0 default
+			no_Of_led=16;
+			
+		}
+		void init_uart_1(){
+			PINSEL0 = 5;  // Enable UART1 TXD (P0.8)
+			U0LCR = 0x83;     // Enable DLAB, 8-bit word length				 
+			U0DLL = 97;
+			U0LCR = 0x03;              // Disable DLAB
+		
+		}
+	  unsigned char byte_bit(unsigned char bit){
+			return bit? 0xE0:0x80;
+		}
+		void encode_decimal_bit(unsigned char  grb_data[]){
+			unsigned char val;
+			for(int i=0;i<3;i++){
+				val=grb_data[i];
+				for(int i=0;i<=7;i++){
+					spi_tx(byte_bit((val&(1<<i))));
+				}
+			}
+		}
+		void spi_tx(unsigned char info){
+			//std::printf(info);
+			//while(!(U0LSR&0x20));
+			//U0THR=(char)info;
+			
+		}
+		void controle_palette(int swt_ind){
+			
+			//if(swt_ind==16){
+				
+
+			//}
+			//else{
+				
+			//}
+			
+			unsigned char color_palette[][3]={
+				{255,0,0},{0,255,0},{35,82,9},{28,67,59},{97,7,99},
+				{255,0,0},{0,255,0},{35,82,9},{28,67,59},{97,7,99},
+				{255,0,0},{0,255,0},{35,82,9},{28,67,59},{97,7,99},
+				{255,0,0}
+			};
+			
+			for(int i=16;i<=31;i++){
+				if(mode==0){
+					if(swt_ind==-1){
+						unsigned char  grb_data[]={0,0,0};
+						IO0CLR=(1<<4);
+						encode_decimal_bit(grb_data);
+					}
+					else if((i==swt_ind || i==swt_ind+1)){
+						IO0SET=(1<<4);
+						encode_decimal_bit(color_palette[i]);
+					}
+				}
+				//musical_instrument
+				else if(mode==1){
+					if(i!=swt_ind ){
+						unsigned char  grb_data[]={0,0,0};
+						encode_decimal_bit(grb_data);
+					}
+					else{
+						encode_decimal_bit(color_palette[i]);
+					}
+				}
+					
+			}
+			
+		}
+		
+};
+class SD_read{
+	
+};
+int main(){
+	Switch sw;
+	LED led(0);
+	led.controle_palette(sw.search_ind());
+	
+}
